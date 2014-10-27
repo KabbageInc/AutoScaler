@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8280A7F-30CA-49D6-AEC4-B0F0ED916612}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleAWS</RootNamespace>
+    <AssemblyName>SimpleAWS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EC2Client.cs" />
+    <Compile Include="Models\EC2\AttachmentStatus.cs" />
+    <Compile Include="Models\SQS\Attribute.cs" />
+    <Compile Include="Models\EC2\BlockDeviceMapping.cs" />
+    <Compile Include="Models\EC2\RunInstancesResponse.cs" />
+    <Compile Include="Models\EC2\EbsBlockDevice.cs" />
+    <Compile Include="Models\EC2\VolumeType.cs" />
+    <Compile Include="Models\EC2\IamInstanceProfileSpecification.cs" />
+    <Compile Include="Models\EC2\ShutdownBehavior.cs" />
+    <Compile Include="Models\EC2\RunInstancesRequest.cs" />
+    <Compile Include="Models\EC2\InstanceNetworkInterfaceSpecification.cs" />
+    <Compile Include="Models\EC2\PrivateIpAddressSpecification.cs" />
+    <Compile Include="Models\EC2\InstanceStateChange.cs" />
+    <Compile Include="Models\EC2\TerminateInstancesResponse.cs" />
+    <Compile Include="Models\EC2\TerminateInstancesRequest.cs" />
+    <Compile Include="Models\EC2\VirtualizationType.cs" />
+    <Compile Include="Models\EC2\StateReason.cs" />
+    <Compile Include="Models\EC2\InstanceStateName.cs" />
+    <Compile Include="Models\EC2\InstanceState.cs" />
+    <Compile Include="Models\EC2\DeviceType.cs" />
+    <Compile Include="Models\EC2\ProductCode.cs" />
+    <Compile Include="Models\EC2\ProductCodeValues.cs" />
+    <Compile Include="Models\EC2\PlatformValues.cs" />
+    <Compile Include="Models\EC2\Placement.cs" />
+    <Compile Include="Models\EC2\Tag.cs" />
+    <Compile Include="Models\EC2\Tenancy.cs" />
+    <Compile Include="Models\EC2\NetworkInterfaceStatus.cs" />
+    <Compile Include="Models\EC2\InstancePrivateIpAddress.cs" />
+    <Compile Include="Models\EC2\InstanceNetworkInterfaceAttachment.cs" />
+    <Compile Include="Models\EC2\InstanceNetworkInterface.cs" />
+    <Compile Include="Models\EC2\InstanceNetworkInterfaceAssociation.cs" />
+    <Compile Include="Models\EC2\Monitoring.cs" />
+    <Compile Include="Models\EC2\MonitoringState.cs" />
+    <Compile Include="Models\EC2\InstanceType.cs" />
+    <Compile Include="Models\EC2\IamInstanceProfile.cs" />
+    <Compile Include="Models\EC2\HypervisorType.cs" />
+    <Compile Include="Models\EC2\InstanceBlockDeviceMapping.cs" />
+    <Compile Include="Models\EC2\EbsInstanceBlockDevice.cs" />
+    <Compile Include="Models\EC2\Instance.cs" />
+    <Compile Include="Models\EC2\ArchitectureValues.cs" />
+    <Compile Include="Models\EC2\GroupIdentifier.cs" />
+    <Compile Include="Models\EC2\DescribeInstancesResponse.cs" />
+    <Compile Include="Models\EC2\Reservation.cs" />
+    <Compile Include="Models\EC2\DescribeInstancesRequest.cs" />
+    <Compile Include="Models\EC2\Filter.cs" />
+    <Compile Include="Models\SQS\BatchResultErrorEntry.cs" />
+    <Compile Include="Models\S3\CommonPrefix.cs" />
+    <Compile Include="Models\SQS\GetQueueAttributesResult.cs" />
+    <Compile Include="Models\SQS\GetQueueAttributesResponse.cs" />
+    <Compile Include="Models\SQS\DeleteMessageResponse.cs" />
+    <Compile Include="Models\S3\EncodingType.cs" />
+    <Compile Include="Models\S3\ListBucketResult.cs" />
+    <Compile Include="Models\S3\ListBucketRequest.cs" />
+    <Compile Include="Models\S3\Owner.cs" />
+    <Compile Include="Models\SQS\GetQueueAttributesRequest.cs" />
+    <Compile Include="Models\SQS\ReceiveMessageResponse.cs" />
+    <Compile Include="Models\S3\S3Object.cs" />
+    <Compile Include="Models\S3\S3StorageClass.cs" />
+    <Compile Include="Models\SQS\SendMessageBatchRequest.cs" />
+    <Compile Include="Models\SQS\SendMessageBatchRequestEntry.cs" />
+    <Compile Include="Models\SQS\SendMessageBatchResponse.cs" />
+    <Compile Include="Models\SQS\SendMessageBatchResult.cs" />
+    <Compile Include="Models\SQS\SendMessageBatchResultEntry.cs" />
+    <Compile Include="S3Client.cs" />
+    <Compile Include="Models\SQS\Message.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\SQS\ReceiveMessageRequest.cs" />
+    <Compile Include="Models\SQS\ReceiveMessageResult.cs" />
+    <Compile Include="Models\S3\S3Message.cs" />
+    <Compile Include="Models\S3\S3Response.cs" />
+    <Compile Include="Models\SQS\SendMessageRequest.cs" />
+    <Compile Include="Models\SQS\SendMessageResponse.cs" />
+    <Compile Include="Models\SQS\SendMessageResult.cs" />
+    <Compile Include="SQSClient.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
